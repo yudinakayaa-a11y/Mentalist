@@ -1,36 +1,164 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Carlos</title>
+    <style>
+        /* Fundo dark vermelho/vinho combinando com o tema do Mentalista */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0d0202, #210505);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-<!-- FOTO DE PERFIL (Substitua o link entre as aspas pela sua foto) -->
-<img src="https://unsplash.com" width="150" height="150" style="border-radius: 50%; border: 3px solid #b30000;" alt="Patrick Jane Avatar">
+        /* Container principal com blur e neon vermelho */
+        .profile-container {
+            background: rgba(33, 5, 5, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 45, 45, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 45, 45, 0.15);
+        }
 
-## 🃏･═════★ Carlos ★═════･🃏
-### 🔴 ONLINE
+        /* Foto de perfil com borda neon vermelha */
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff2d2d;
+            box-shadow: 0 0 15px rgba(255, 45, 45, 0.5);
+            margin-bottom: 15px;
+        }
 
-<br>
+        /* Assinatura de cima estilizada com o seu nome */
+        .top-signature {
+            font-size: 13px;
+            color: #ff2d2d;
+            margin-bottom: 5px;
+            text-shadow: 0 0 5px rgba(255, 45, 45, 0.8);
+            letter-spacing: 1px;
+        }
 
-<!-- BANNER CENTRAL (Substitua o link entre as aspas pelo seu banner) -->
-<table border="0" cellpadding="0" cellspacing="0" bgcolor="#1a0000" style="border: 2px solid #b30000; border-radius: 10px; width: 100%; max-width: 500px;">
-  <tr>
-    <td align="center" style="padding: 10px;">
-      <img src="https://unsplash.com" style="border-radius: 8px; width: 100%;" alt="The Mentalist Banner">
-    </td>
-  </tr>
-</table>
+        .subtitle {
+            font-size: 13px;
+            color: #ff2d2d;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
 
-<!-- FRASE DIGITADA (Substituída por uma imagem animada oficial do GitHub para não quebrar) -->
-<div style="margin-top: 15px; margin-bottom: 25px;">
-  <img src="https://demolab.com." alt="Typing SVG" />
-</div>
+        /* Container do Banner do Patrick Jane */
+        .screenshot-container {
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 45, 45, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
 
-<!-- SEÇÃO DA BIO -->
-<table border="0" cellpadding="0" cellspacing="0" bgcolor="#0d0000" style="border-left: 5px solid #ff0000; border-radius: 4px; width: 100%; max-width: 500px; text-align: left;">
-  <tr>
-    <td style="padding: 15px; color: #ffffff; font-size: 15px; line-height: 1.6;">
-      🔻 <i>"A verdade é uma linha reta, mas a mentira tem muitas curvas."</i>
-      <br><br>
-      🍷 <i>"Eu não sou adivinho. Sou apenas consideravelmente mais inteligente do que você."</i>
-    </td>
-  </tr>
-</table>
+        .screenshot {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
 
-</div>
+        /* Container do efeito de texto digitando lentamente */
+        .typewriter-container {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0 20px 0;
+        }
+
+        .typewriter-text {
+            color: #ff4d4d;
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #ff4d4d;
+            width: 42ch; /* Quantidade exata de caracteres da frase */
+            animation: typing 5s steps(42) infinite, blink 0.5s step-end infinite;
+        }
+
+        /* Animações CSS do Typewriter */
+        @keyframes typing {
+            0%, 90%, 100% { width: 0 }
+            20%, 80% { width: 42ch }
+        }
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #ff4d4d }
+        }
+
+        /* Bloco com as duas frases solicitadas */
+        .phrases-box {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: left;
+            margin-top: 15px;
+            border-left: 4px solid #ff2d2d;
+            box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.1);
+        }
+
+        .phrases-box p {
+            margin: 16px 0;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        .phrases-box p:first-child {
+            margin-top: 0;
+        }
+
+        .phrases-box p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Cole o link da foto de perfil quadrada/redonda do Patrick Jane aqui -->
+        <img src="LINK_DA_FOTO_DE_PERFIL_AQUI" alt="Foto de Perfil" class="profile-pic">
+
+        <!-- Linha decorativa atualizada com o seu nome -->
+        <div class="top-signature">†•.═════•★ Carlos ★•═════.•†</div>
+        
+        <div class="subtitle">Online</div>
+
+        <!-- Banner horizontal do Patrick Jane -->
+        <div class="screenshot-container">
+            <img src="LINK_DO_BANNER_HORIZONTAL_AQUI" alt="Banner The Mentalist" class="screenshot">
+        </div>
+
+        <!-- Efeito da frase digitando lentamente (sem quebrar) -->
+        <div class="typewriter-container">
+            <p class="typewriter-text">Se você parar de olhar, você começa a ver.</p>
+        </div>
+
+        <!-- Suas Duas Frases Solicitadas -->
+        <div class="phrases-box">
+            <p>🔻 "A verdade é uma linha reta, mas a mentira tem muitas curvas."</p>
+            <p>🍷 "Eu não sou adivinho. Sou apenas consideravelmente mais inteligente do que você."</p>
+        </div>
+    </div>
+
+</body>
+</html>
